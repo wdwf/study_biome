@@ -1,17 +1,21 @@
-class Test {
-  private name: string
-  private age: number
-  private tel: string
+class Stack {
+	private _items: string[];
 
-  constructor(name: string, age: number, tel: string) {
-    this.name = name
-    this.age = age
-    this.tel = tel
-  }
+	constructor() {
+		this._items = [];
+	}
 
-  tellMyName(): void {
-    console.log(this.name)
-    console.log("HELLO")
+	show(): void {
+		console.log(this._items);
+	}
 
-  }
+	push(element: string) {
+		this._items.push(element);
+	}
 }
+
+const stack = new Stack();
+stack.push("ab");
+stack.push("bc");
+
+stack.show();
